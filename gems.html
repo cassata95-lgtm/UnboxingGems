@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unboxed Gems — Unboxing Life Official</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-gem">◆</span> Unboxing Life Official
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="index.html#videos">Videos</a>
+        <a class="nav-link active" href="gems.html">Unboxed Gems</a>
+        <a class="nav-cta" href="https://www.youtube.com/@unboxinglifeOfficial" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">by Unboxing Life Official</p>
+      <h1 class="hero-title">Go Where The<br /><span class="accent">Tourists Don't</span></h1>
+      <p class="hero-sub">
+        Real destinations. No tourist traps. Curated by someone who actually went there.
+      </p>
+      <a href="#bundles" class="btn-primary">Unlock a Bundle</a>
+    </div>
+    <div class="hero-scroll">↓ scroll</div>
+  </section>
+
+  <div class="stripe-divider"></div>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Pick a Bundle</h3>
+          <p>Each bundle is a handpicked collection of real destinations — places worth the detour.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>One-Time Unlock</h3>
+          <p>Pay once, $9.99. No subscription. No account. Yours instantly.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Open the Full Map</h3>
+          <p>Every destination drops into one shared Google Maps list. Open it, save it, and go.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUNDLES -->
+  <section class="bundles" id="bundles">
+    <div class="container">
+      <h2 class="section-title">Choose Your Hidden Gem</h2>
+      <p class="section-sub">Unlock a bundle and get one Google Maps list with every destination pinned and ready.</p>
+
+      <div class="bundle-grid" id="bundleGrid">
+
+        <!-- BUNDLE 1 -->
+        <div class="bundle-card" data-bundle="1">
+          <div class="bundle-badge">Japan's Hidden Discounts</div>
+          <h3 class="bundle-title">Japan's Hidden Discount Gems</h3>
+          <p class="bundle-desc">The spots the locals actually shop at. Rare Pokémon pulls, vintage thrift finds, and insane prices — all within reach of Tokyo. No markup, no hype, just the real deal.</p>
+
+          <div class="bundle-locked-state" id="locked-1">
+            <div class="lock-icon">🔒</div>
+            <p class="lock-hint">All destinations hidden until unlocked</p>
+            <div class="lock-tags">
+              <span class="tag">Tokyo</span>
+              <span class="tag">Japan</span>
+              <span class="tag">Shinjuku</span>
+              <span class="tag">Shibuya</span>
+              <span class="tag">Akihabara</span>
+            </div>
+          </div>
+
+          <div class="bundle-unlocked-state" id="unlocked-1" style="display:none">
+            <p class="unlocked-label">Your full route is ready →</p>
+            <a class="btn-maps" id="map-link-1" href="#" target="_blank" rel="noopener">
+              Open Full Map in Google Maps
+            </a>
+          </div>
+
+          <div class="bundle-footer">
+            <span class="bundle-price">$9.99</span>
+            <button class="btn-unlock" id="btn-1" onclick="purchase(1)">Unlock Bundle →</button>
+          </div>
+        </div>
+
+        <!-- BUNDLE 2 -->
+        <div class="bundle-card" data-bundle="2">
+          <div class="bundle-badge">Best Hidden Photo Spots</div>
+          <h3 class="bundle-title">Best Hidden Photo Spots</h3>
+          <p class="bundle-desc">Forget the crowded overlooks. These are the frames no one else is getting — tucked beside ancient shrines, buried deep in local parks, and perched on viewpoints that'll stop you mid-breath. Every spot in this bundle is a shot worth traveling for.</p>
+
+          <div class="bundle-locked-state" id="locked-2">
+            <div class="lock-icon">🔒</div>
+            <p class="lock-hint">All destinations hidden until unlocked</p>
+            <div class="lock-tags">
+              <span class="tag">Tokyo</span>
+              <span class="tag">Osaka</span>
+              <span class="tag">Kyoto</span>
+            </div>
+          </div>
+
+          <div class="bundle-unlocked-state" id="unlocked-2" style="display:none">
+            <p class="unlocked-label">Your full route is ready →</p>
+            <a class="btn-maps" id="map-link-2" href="#" target="_blank" rel="noopener">
+              Open Full Map in Google Maps
+            </a>
+          </div>
+
+          <div class="bundle-footer">
+            <span class="bundle-price">$9.99</span>
+            <button class="btn-unlock" id="btn-2" onclick="purchase(2)">Unlock Bundle →</button>
+          </div>
+        </div>
+
+        <!-- BUNDLE 3 -->
+        <div class="bundle-card" data-bundle="3">
+          <div class="bundle-badge">Bundle 03</div>
+          <h3 class="bundle-title">Top 20 Budget Activities In Japan!</h3>
+          <p class="bundle-desc">Japan doesn't have to break the bank — it just looks like it does. We did the research so you don't have to. 20 unforgettable experiences across Japan that cost next to nothing — hidden local spots the guidebooks charge you to find out about.</p>
+
+          <div class="bundle-locked-state" id="locked-3">
+            <div class="lock-icon">🔒</div>
+            <p class="lock-hint">All destinations hidden until unlocked</p>
+            <div class="lock-tags">
+              <span class="tag">All Across Japan</span>
+            </div>
+          </div>
+
+          <div class="bundle-unlocked-state" id="unlocked-3" style="display:none">
+            <p class="unlocked-label">Your full route is ready →</p>
+            <a class="btn-maps" id="map-link-3" href="#" target="_blank" rel="noopener">
+              Open Full Map in Google Maps
+            </a>
+          </div>
+
+          <div class="bundle-footer">
+            <span class="bundle-price">$9.99</span>
+            <button class="btn-unlock" id="btn-3" onclick="purchase(3)">Unlock Bundle →</button>
+          </div>
+        </div>
+
+        <!-- ALL ACCESS -->
+        <div class="bundle-card all-access-card">
+          <div class="all-access-banner">⭐ Best Value</div>
+          <div class="bundle-badge" style="background:rgba(251,191,36,0.15); border-color:rgba(251,191,36,0.4); color:#b45309;">All Access Pass</div>
+          <h3 class="bundle-title">Unlock All 3 Bundles</h3>
+          <p class="bundle-desc">Get every destination we've mapped — Japan's hidden discounts, the best photo spots, and all 20 budget activities — in one single unlock. All three Google Maps lists, all at once.</p>
+
+          <div class="bundle-locked-state" id="locked-all" style="border-color:rgba(251,191,36,0.3); background:rgba(251,191,36,0.04);">
+            <div class="lock-icon">🗺️</div>
+            <p class="lock-hint">Unlocks all 3 bundles instantly</p>
+            <div class="lock-tags">
+              <span class="tag" style="color:#b45309; border-color:rgba(251,191,36,0.4); background:rgba(251,191,36,0.1);">Japan's Hidden Discounts</span>
+              <span class="tag" style="color:#b45309; border-color:rgba(251,191,36,0.4); background:rgba(251,191,36,0.1);">Best Hidden Photo Spots</span>
+              <span class="tag" style="color:#b45309; border-color:rgba(251,191,36,0.4); background:rgba(251,191,36,0.1);">Top 20 Budget Activities</span>
+            </div>
+          </div>
+
+          <div class="bundle-footer">
+            <div>
+              <span class="bundle-price" style="color: var(--gold);">$24.99</span>
+              <span class="bundle-save">Save $4.98</span>
+            </div>
+            <button class="btn-unlock btn-unlock-gold" id="btn-all" onclick="purchaseAll()">Unlock All →</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <p class="hero-eyebrow">Who's Behind This</p>
+        <h2>We don't do tourist traps.</h2>
+        <p>
+          We're the couple behind <strong>Unboxing Life Official</strong> on YouTube. Every destination in these bundles is somewhere we've personally been — trails we hiked, towns we stumbled into, spots that made us stop and stare.
+        </p>
+        <p>
+          These bundles are our way of sharing the real stuff — not the top-10 lists, not the influencer overlooks. The hidden paths. The gems.
+        </p>
+        <a href="https://www.youtube.com/@unboxinglifeOfficial" target="_blank" rel="noopener" class="btn-secondary">Watch on YouTube</a>
+      </div>
+      <div class="about-badge">
+        <img class="globe-img" src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?q=80&w=1974&auto=format&fit=crop" alt="Globe" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="logo"><span class="logo-gem">◆</span> Unboxed Gems</p>
+      <p class="footer-sub">Real places. One-time price. Zero regrets.</p>
+      <p class="footer-legal">© 2026 Unboxed Gems · by Unboxing Life Official</p>
+    </div>
+  </footer>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal">
+      <div class="modal-gem">◆</div>
+      <h2>Bundle Unlocked!</h2>
+      <p>Your Google Maps list is ready. Every destination is pinned and waiting — just open and go.</p>
+      <button class="btn-primary" onclick="closeModal()">See My Map →</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
