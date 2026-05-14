@@ -73,6 +73,15 @@
       <h2 class="section-title">Latest From the Channel</h2>
       <p class="section-sub">Watch our most recent trips — then unlock the full destination maps in the Unboxed Gems shop.</p>
 
+      <!-- FEATURED LATEST VIDEO -->
+      <div class="featured-video-wrap" id="featuredVideo">
+        <div class="featured-badge">🔴 Latest Upload</div>
+        <div class="featured-player" id="featuredPlayer">
+          <div class="featured-loading">Loading latest video...</div>
+        </div>
+        <div class="featured-meta" id="featuredMeta"></div>
+      </div>
+
       <div class="video-grid">
 
         <div class="video-card">
@@ -170,5 +179,35 @@
     </div>
   </footer>
 
+  <script>
+    const CHANNEL_ID = 'UCk140a25rIBQYO8uvuMVLVw';
+
+    async function loadLatestVideo() {
+      try {
+        const rss = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
+        const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss)}`;
+        const res = await fetch(api);
+        const data = await res.json();
+        const latest = data.items[0];
+        const videoId = latest.link.split('v=')[1].split('&')[0];
+
+        document.getElementById('featuredPlayer').innerHTML = `
+          <iframe src="https://www.youtube.com/embed/${videoId}" title="${latest.title}"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        `;
+        document.getElementById('featuredMeta').innerHTML = `
+          <p class="featured-title">${latest.title}</p>
+          <a class="featured-link" href="${latest.link}" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        `;
+      } catch (e) {
+        document.getElementById('featuredPlayer').innerHTML = `
+          <iframe src="https://www.youtube.com/embed/nDviL5kpmgs" title="Latest Video"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        `;
+      }
+    }
+
+    loadLatestVideo();
+  </script>
 </body>
 </html>
