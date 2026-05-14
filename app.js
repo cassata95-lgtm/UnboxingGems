@@ -19,10 +19,10 @@ const MAPS_LISTS = {
 //      https://yoursite.com/?success=true&bundle=1
 //   4. Paste each link below
 const STRIPE_LINKS = {
-  1: 'https://buy.stripe.com/YOUR_LINK_FOR_BUNDLE_1',
-  2: 'https://buy.stripe.com/YOUR_LINK_FOR_BUNDLE_2',
-  3: 'https://buy.stripe.com/YOUR_LINK_FOR_BUNDLE_3',
-  all: 'https://buy.stripe.com/YOUR_LINK_FOR_ALL_ACCESS',
+  1: 'https://buy.stripe.com/aFa6oHbT51byetD34y3cc00',
+  2: 'https://buy.stripe.com/14AeVdf5h8E04T30Wq3cc01',
+  3: 'https://buy.stripe.com/9B6fZhbT5f2o1GReNg3cc02',
+  all: 'https://buy.stripe.com/5kQ8wP9KXaM8dpz6gK3cc03',
 };
 
 const STORAGE_KEY = 'unboxed_gems_unlocked';
